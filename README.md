@@ -1,1 +1,2 @@
-# IrregularVerbs
+# IrregularVerbs - Project for everyone!
+A project that allows you to train your knowledge of irregular verbs in English. The essence of the project, a random verb is selected and you must remember the second and third forms for it. Shows errors. You can choose the level of difficulty. There are 470 irregular verbs in English. However, the easy difficulty level will only produce the 100 most used.
