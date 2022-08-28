@@ -46,10 +46,16 @@ export default {
       if (v2 != v2_a) {
         document.getElementById('v2').style.animation = "wrong_answer 0.999s"
         setTimeout(() => document.getElementById('v2').style.animation = 'none', 1300) 
+      } else {
+        document.getElementById('v2').style.animation = "correct_answer 0.999s"
+        setTimeout(() => document.getElementById('v2').style.animation = 'none', 1300)        
       }
       if (v3 != v3_a) {
         document.getElementById('v3').style.animation = "wrong_answer 0.999s"
         setTimeout(() => document.getElementById('v3').style.animation = 'none', 1300) 
+      } else {
+        document.getElementById('v3').style.animation = "correct_answer 0.999s"
+        setTimeout(() => document.getElementById('v3').style.animation = 'none', 1300)        
       }
       document.getElementById('v2').value = v2_a
       document.getElementById('v3').value = v3_a
@@ -127,6 +133,20 @@ export default {
   20% {
     border: 3px solid rgb(255, 0, 0);
     box-shadow: 0px 4px 0px rgb(255, 0, 0);    
+  }
+  100% {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 0px black;    
+  }
+}
+@keyframes correct_answer {
+  0% {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 0px black;    
+  }
+  20% {
+    border: 3px solid rgb(0, 255, 64);
+    box-shadow: 0px 4px 0px rgb(0, 255, 64);    
   }
   100% {
     border: 3px solid rgb(0, 0, 0);
