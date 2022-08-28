@@ -83,31 +83,36 @@ export default {
 <style>
 .AboutTheProject {
     display: flex;
-    margin: 30px 4px 30px 0px
+    margin: 30px 14px 30px 0px;
+    font-family: 'Arial';
 }
 .main {
     width: 70%;
-    margin-right: 4px;
+    margin-right: 14px;
     display: flex;
 }
 .main_window {
     width: 50%;
-    margin-left: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border: 1px solid rgb(221, 221, 221);
+    margin-left: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(219, 219, 219, 0.555);
     
 }
 .other_windows {
     width: 30%;
 }
 .other_window {
-    background-color: blue;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 14px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0px 10px 0px rgb(221, 221, 221);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(219, 219, 219, 0.555);
 }
 </style>

@@ -10,7 +10,7 @@
       <div><button class="btn check" v-on:click="show_result">Check</button></div>
       <div><button class="btn generate" v-on:click="generate">Generate</button></div>
     </div>
-    <AboutTheProject/>
+    <!--AboutTheProject/-->
   </div>
 </template>
 
