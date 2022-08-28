@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p id="test"></p>
+    <p id="welc">Irregular Verbs Project </p>
     <div class="verbs">
       <div class="verb-container"><input class="verb" placeholder="v1" id="v1"></div>
       <div class="verb-container"><input class="verb" placeholder="v2" id="v2"></div>
@@ -10,16 +10,23 @@
       <div><button class="btn check" v-on:click="show_result">Check</button></div>
       <div><button class="btn generate" v-on:click="generate">Generate</button></div>
     </div>
+    <AboutTheProject/>
   </div>
 </template>
 
 <script>
-const json = require('../verbs/all.json'); 
+const json = require('../verbs/all.json');
+import AboutTheProject from '../components/AboutTheProject.vue'
+
 export default {
   name: 'HomeView',
+  components: { AboutTheProject }, 
   mounted() {
       document.title = 'Irregular Verbs Project'
       this.generate()
+      /* setInterval(() => {
+        document.getElementById('welc').innerText = document.getElementById('welc').innerText+'🇬🇧'
+      }, 4000); */
   },
   methods: {
     get_random_verb(obj) {
@@ -58,6 +65,7 @@ export default {
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: .3s;
 }
 .verb {
   font-family: 'Merriweather';
@@ -105,7 +113,12 @@ export default {
   outline: 1px solid rgb(71, 71, 255);
   box-shadow: 0px 4px 0px rgb(71, 71, 255);
 }
-
+#welc {
+  font-family: 'Merriweather';
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
 @keyframes wrong_answer {
   0% {
     border: 3px solid rgb(0, 0, 0);
