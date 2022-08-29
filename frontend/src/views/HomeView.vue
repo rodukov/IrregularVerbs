@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="description-container" id="description-container">
+      <p class="description"></p>
+    </div>
     <p id="welc">Irregular Verbs Project </p>
     <div class="verbs">
       <div class="verb-container"><input class="verb" placeholder="v1" id="v1"></div>
@@ -57,6 +60,10 @@ export default {
         document.getElementById('v3').style.animation = "correct_answer 0.999s"
         setTimeout(() => document.getElementById('v3').style.animation = 'none', 1300)        
       }
+      document.getElementsByClassName('description')[0].innerText = json[document.getElementById('v1').value][0]["description"]
+      document.getElementsByClassName("description-container")[0].style.transform = "translateX(0px)";
+      document.getElementsByClassName("description-container")[0].style.opacity = "1";
+      setTimeout(() => document.getElementsByClassName("description-container")[0].style.transform = "translateX(150%)", 4300)
       document.getElementById('v2').value = v2_a
       document.getElementById('v3').value = v3_a
     }
@@ -65,6 +72,31 @@ export default {
 </script>
 
 <style>
+.description-container {
+  position: absolute;
+  background: rgba(230, 230, 230, 0.205);
+  backdrop-filter: blur(9.5px);
+  border-radius: 7px 0px 0px 7px;
+  top: 50px;
+  left: 0;
+  right: 0;
+  width: 30%;
+  padding: 5px;
+  margin-left: auto;
+  text-align: center;
+  border-left: 3px solid black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  transform: translateX(110%);
+  box-shadow: 0px 5px 10px rgba(184, 184, 184, 0.473);
+  transition: .3s;
+  opacity: 0;
+}
+
+.description {
+  font-family: 'Merriweather';
+  font-size: 25px;
+}
 .verbs {
   display: flex;
   align-items: center;
