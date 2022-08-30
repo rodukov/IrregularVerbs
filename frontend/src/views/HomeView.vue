@@ -3,7 +3,7 @@
     <div class="description-container" id="description-container">
       <p class="description"></p>
     </div>
-    <p id="welc">Irregular Verbs Project </p>
+    <p id="welc">Irregular Verbs Project</p>
     <div class="verbs">
       <div class="verb-container"><input class="verb" placeholder="v1" id="v1"></div>
       <div class="verb-container"><input class="verb" placeholder="v2" id="v2"></div>
@@ -14,16 +14,18 @@
       <div><button class="btn generate" v-on:click="generate">Generate</button></div>
     </div>
     <!--AboutTheProject/-->
+    <!--why_we/-->
   </div>
 </template>
 
 <script>
 const json = require('../verbs/all.json');
 import AboutTheProject from '../components/AboutTheProject.vue'
+import why_we from '../components/why_we.vue'
 
 export default {
   name: 'HomeView',
-  components: { AboutTheProject }, 
+  components: { AboutTheProject, why_we }, 
   mounted() {
       document.title = 'Irregular Verbs Project'
       this.generate()
