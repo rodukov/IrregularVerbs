@@ -187,4 +187,40 @@ export default {
     box-shadow: 0px 4px 0px black;    
   }
 }
+
+@media (max-width: 1608px) {
+  .verbs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 510px;
+  }
+  .verb {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  .btnc {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 357px;
+  }
+}
+@media (max-width: 530px) {
+  .verb {
+    width: 97%;
+  }
+  .verbs {
+    width: 97%;
+  }
+}
+@media (max-width: 370px) {
+  .btn {
+    font-size: 16px;
+  }
+  .btnc {
+    width: 263.8px;
+    margin-top: 10px;
+  }
+}
 </style>
