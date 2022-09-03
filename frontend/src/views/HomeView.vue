@@ -62,10 +62,15 @@ export default {
         document.getElementById('v3').style.animation = "correct_answer 0.999s"
         setTimeout(() => document.getElementById('v3').style.animation = 'none', 1300)        
       }
+      document.getElementsByClassName("description-container")[0].style.display = "inline-block";
       document.getElementsByClassName('description')[0].innerText = json[document.getElementById('v1').value][0]["description"]
       document.getElementsByClassName("description-container")[0].style.transform = "translateX(0px)";
       document.getElementsByClassName("description-container")[0].style.opacity = "1";
-      setTimeout(() => document.getElementsByClassName("description-container")[0].style.transform = "translateX(150%)", 4300)
+      setTimeout(() => {
+        document.getElementsByClassName("description-container")[0].style.transform = "translateX(150%)"
+        document.getElementsByClassName("description-container")[0].style.opacity = "0";
+        document.getElementsByClassName("description-container")[0].style.display = "none";
+      }, 4300)
       document.getElementById('v2').value = v2_a
       document.getElementById('v3').value = v3_a
     }
@@ -89,10 +94,11 @@ export default {
   border-left: 3px solid black;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  transform: translateX(110%);
+  transform: translateX(150%);
   box-shadow: 0px 5px 10px rgba(184, 184, 184, 0.473);
   transition: .3s;
   opacity: 0;
+  display: none;
 }
 
 .description {
